@@ -28,7 +28,7 @@
   <header>
     <span class="etiqueta">Laboratório de Git + GitHub</span>
     <!-- DESAFIO 1: cada aluno substitui o título abaixo por sua proposta. -->
-    <h1>Conheça nossa equipe</h1>
+    <h1>Turma ADS: código em equipe</h1>
     <p>Uma página construída em conjunto. Cada perfil representa uma contribuição; cada revisão ajuda a equipe a crescer.</p>
   </header>
 
@@ -47,7 +47,27 @@
     <h2>Quem somos</h2>
     <!-- DESAFIO 2: todos substituem o MESMO comentário abaixo, sem acrescentar o cartão fora desta seção. -->
     <section id="perfis" aria-label="Perfis dos integrantes">
-      <!-- SUBSTITUIR POR PERFIS -->
+      <article class="perfil">
+        <h3>Gabriel Medeiros</h3>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas na UNIFACISA, curioso por tecnologia e por como as coisas funcionam por trás das telas.</p>
+        <p><strong>Habilidades:</strong> HTML, CSS e lógica de programação.</p>
+        <p><strong>Quero aprender:</strong> Git, GitHub e desenvolvimento web completo.</p>
+        <button type="button" onclick="mostrarCuriosidadeGabriel(this)">Curiosidade sobre mim</button>
+        <p id="curiosidade-gabriel" hidden></p>
+        <script>
+          const curiosidadesGabriel = [
+            "Meu primeiro código foi um \"Olá, mundo!\" que demorou mais do que deveria.",
+            "Prefiro resolver bugs com café do lado.",
+            "Gosto de entender como as coisas funcionam por dentro."
+          ];
+          function mostrarCuriosidadeGabriel(botao) {
+            const texto = document.getElementById("curiosidade-gabriel");
+            texto.textContent = curiosidadesGabriel[Math.floor(Math.random() * curiosidadesGabriel.length)];
+            texto.hidden = false;
+            botao.textContent = "Outra curiosidade";
+          }
+        </script>
+      </article>
     </section>
 
     <!-- MODELO: copie este cartão para substituir o comentário dentro de #perfis.
