@@ -52,6 +52,21 @@
         <p>Estudante de Análise e Desenvolvimento de Sistemas na UNIFACISA, curioso por tecnologia e por como as coisas funcionam por trás das telas.</p>
         <p><strong>Habilidades:</strong> HTML, CSS e lógica de programação.</p>
         <p><strong>Quero aprender:</strong> Git, GitHub e desenvolvimento web completo.</p>
+        <button type="button" onclick="mostrarCuriosidadeGabriel(this)">Curiosidade sobre mim</button>
+        <p id="curiosidade-gabriel" hidden></p>
+        <script>
+          const curiosidadesGabriel = [
+            "Meu primeiro código foi um \"Olá, mundo!\" que demorou mais do que deveria.",
+            "Prefiro resolver bugs com café do lado.",
+            "Gosto de entender como as coisas funcionam por dentro."
+          ];
+          function mostrarCuriosidadeGabriel(botao) {
+            const texto = document.getElementById("curiosidade-gabriel");
+            texto.textContent = curiosidadesGabriel[Math.floor(Math.random() * curiosidadesGabriel.length)];
+            texto.hidden = false;
+            botao.textContent = "Outra curiosidade";
+          }
+        </script>
       </article>
     </section>
 
