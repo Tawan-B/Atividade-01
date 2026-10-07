@@ -28,7 +28,7 @@
   <header>
     <span class="etiqueta">Laboratório de Git + GitHub</span>
     <!-- DESAFIO 1: cada aluno substitui o título abaixo por sua proposta. -->
-    <h1>Conheça nossa equipe</h1>
+    <h1>Turma ADS: código em equipe</h1>
     <p>Uma página construída em conjunto. Cada perfil representa uma contribuição; cada revisão ajuda a equipe a crescer.</p>
   </header>
 
@@ -48,14 +48,12 @@
     <!-- DESAFIO 2: todos substituem o MESMO comentário abaixo, sem acrescentar o cartão fora desta seção. -->
     <section id="perfis" aria-label="Perfis dos integrantes">
       <article class="perfil">
-        <div class="perfil-kauan">
-          <h3>Kauan Dantas Clemente</h3>
-          <p><strong>Sobre:</strong> Desenvolvedor Full Stack em formação, cursando Análise e Desenvolvimento de Sistemas.</p>
-          <p><strong>Interesses:</strong> Apaixonado por tecnologia e soluções inovadoras.</p>
-          <button type="button" onclick="mostrarDescricaoKauan()">Curiosidades</button>
-          <button type="button" onclick="mostrarHabilidadesKauan()">Habilidades</button>
-          <div id="conteudo-kauan"></div>
-        </div>
+        <h3>Kauan Dantas Clemente</h3>
+        <p><strong>Sobre:</strong> Desenvolvedor Full Stack em formação, cursando Análise e Desenvolvimento de Sistemas.</p>
+        <p><strong>Interesses:</strong> Tecnologia e programação, especialmente desenvolvimento de sistemas e criação de projetos próprios.</p>
+        <button type="button" onclick="mostrarDescricaoKauan()">Curiosidades</button>
+        <button type="button" onclick="mostrarHabilidadesKauan()">Habilidades</button>
+        <div id="conteudo-kauan"></div>
         <script>
           function mostrarDescricaoKauan() {
             document.getElementById('conteudo-kauan').style.display = 'block';
@@ -64,8 +62,7 @@
                 <li>Gosto de tecnologia e tenho curiosidade em entender como as coisas funcionam.</li> <li>Estou sempre tentando aprender algo novo, principalmente quando posso colocar em prática.</li>
                 <li>Gosto de jogos e de explorar diferentes tipos de experiências e desafios.</li> <li>Tenho interesse por programação, mas também gosto de conhecer outras áreas da tecnologia.</li> <li>Prefiro aprender fazendo do que apenas ficar na teoria.</li>
               </ul>
-              <button id="botao-ocultar" type="button" onclick="ocultar()">Ocultar</button>
-            `;
+              <button id="botao-ocultar" type="button" onclick="ocultar()">Ocultar</button>`;
           }
           function ocultar() {
             document.getElementById('conteudo-kauan').style.display = 'none';}
@@ -75,8 +72,28 @@
               <ul id="habilidades-kauan">
                 <li>JavaScript</li> <li>TypeScript</li> <li>Java</li> <li>React</li> <li>Spring Boot</li> <li>Git e GitHub</li> <li>SQL e NoSQL</li>
               </ul>
-              <button id="botao-ocultar" type="button" onclick="ocultar()">Ocultar</button>
-            `;
+              <button id="botao-ocultar" type="button" onclick="ocultar()">Ocultar</button>`;
+          }
+        </script>
+      </article>
+      <article class="perfil">
+        <h3>Gabriel Medeiros</h3>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas na UNIFACISA, curioso por tecnologia e por como as coisas funcionam por trás das telas.</p>
+        <p><strong>Habilidades:</strong> HTML, CSS e lógica de programação.</p>
+        <p><strong>Quero aprender:</strong> Git, GitHub e desenvolvimento web completo.</p>
+        <button type="button" onclick="mostrarCuriosidadeGabriel(this)">Curiosidade sobre mim</button>
+        <p id="curiosidade-gabriel" hidden></p>
+        <script>
+          const curiosidadesGabriel = [
+            "Meu primeiro código foi um \"Olá, mundo!\" que demorou mais do que deveria.",
+            "Prefiro resolver bugs com café do lado.",
+            "Gosto de entender como as coisas funcionam por dentro."
+          ];
+          function mostrarCuriosidadeGabriel(botao) {
+            const texto = document.getElementById("curiosidade-gabriel");
+            texto.textContent = curiosidadesGabriel[Math.floor(Math.random() * curiosidadesGabriel.length)];
+            texto.hidden = false;
+            botao.textContent = "Outra curiosidade";
           }
         </script>
       </article>
