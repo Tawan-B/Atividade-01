@@ -47,7 +47,39 @@
     <h2>Quem somos</h2>
     <!-- DESAFIO 2: todos substituem o MESMO comentário abaixo, sem acrescentar o cartão fora desta seção. -->
     <section id="perfis" aria-label="Perfis dos integrantes">
-      <!-- SUBSTITUIR POR PERFIS -->
+      <article class="perfil">
+        <div class="perfil-kauan">
+          <h3>Kauan Dantas Clemente</h3>
+          <p><strong>Sobre:</strong> Desenvolvedor Full Stack em formação, cursando Análise e Desenvolvimento de Sistemas.</p>
+          <p><strong>Interesses:</strong> Apaixonado por tecnologia e soluções inovadoras.</p>
+          <button type="button" onclick="mostrarDescricaoKauan()">Curiosidades</button>
+          <button type="button" onclick="mostrarHabilidadesKauan()">Habilidades</button>
+          <div id="conteudo-kauan"></div>
+        </div>
+        <script>
+          function mostrarDescricaoKauan() {
+            document.getElementById('conteudo-kauan').style.display = 'block';
+            document.getElementById('conteudo-kauan').innerHTML = `
+              <ul id="descricao-kauan">
+                <li>Gosto de tecnologia e tenho curiosidade em entender como as coisas funcionam.</li> <li>Estou sempre tentando aprender algo novo, principalmente quando posso colocar em prática.</li>
+                <li>Gosto de jogos e de explorar diferentes tipos de experiências e desafios.</li> <li>Tenho interesse por programação, mas também gosto de conhecer outras áreas da tecnologia.</li> <li>Prefiro aprender fazendo do que apenas ficar na teoria.</li>
+              </ul>
+              <button id="botao-ocultar" type="button" onclick="ocultar()">Ocultar</button>
+            `;
+          }
+          function ocultar() {
+            document.getElementById('conteudo-kauan').style.display = 'none';}
+          function mostrarHabilidadesKauan() {
+            document.getElementById('conteudo-kauan').style.display = 'block';
+            document.getElementById('conteudo-kauan').innerHTML = `
+              <ul id="habilidades-kauan">
+                <li>JavaScript</li> <li>TypeScript</li> <li>Java</li> <li>React</li> <li>Spring Boot</li> <li>Git e GitHub</li> <li>SQL e NoSQL</li>
+              </ul>
+              <button id="botao-ocultar" type="button" onclick="ocultar()">Ocultar</button>
+            `;
+          }
+        </script>
+      </article>
     </section>
 
     <!-- MODELO: copie este cartão para substituir o comentário dentro de #perfis.
